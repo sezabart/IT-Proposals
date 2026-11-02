@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "lint": "tsc --noEmit",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist --cname proposals.seza.si"
+    "deploy": "node scripts/deploy.mjs",
+    "deploy:proposal": "npm run build && gh-pages -d dist --cname proposals.seza.si"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.2",
