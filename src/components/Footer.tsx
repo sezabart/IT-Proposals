@@ -71,12 +71,23 @@ export const Footer: React.FC<FooterProps> = ({ proposal }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900 flex flex-wrap items-center justify-between text-[11px] text-slate-500 font-mono">
+        <div className="pt-8 border-t border-slate-900 flex flex-wrap items-center justify-between gap-4 text-[11px] text-slate-500 font-mono">
           <div>
             © {new Date().getFullYear()} SEZA ({proposal.provider.email}). All Rights Reserved.
           </div>
-          <div>
-            Hosted on GitHub Pages • Custom Domain: <span className="text-cyan-400">{proposal.provider.domain}</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <a
+              href="./mobidis-future-demo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-400 hover:text-cyan-300 hover:underline"
+              title="Interactive MobiDIS field demo — 3D map, PTZ cameras, LED displays"
+            >
+              MobiDIS Future Demo ↗
+            </a>
+            <span>
+              Hosted on GitHub Pages • Custom Domain: <span className="text-cyan-400">{proposal.provider.domain}</span>
+            </span>
           </div>
         </div>
 
